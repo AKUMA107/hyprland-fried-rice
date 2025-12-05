@@ -76,6 +76,8 @@ sleep 0.1
 # --- 4. APPLY WALLPAPER AND THEME ---
 echo "Setting wallpaper: $WALL"
 swww img "$WALL" --transition-fps 60 --transition-duration 1 --transition-type grow
+cp "$WALL" ~/.config/hypr/current_wallpaper
+convert ~/.config/hypr/current_wallpaper[0] ~/.config/hypr/current_wallpaper_static.png
 wait
 
 # Generate Matugen theme
